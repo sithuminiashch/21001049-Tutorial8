@@ -1,13 +1,13 @@
-object Q1 {
-  val interest = (deposit: Double) => {
-    deposit match {
-      case amount if (amount <= 20000) => amount * 0.02
-      case amount if (amount <= 200000) => amount * 0.04
-      case amount if (amount <= 2000000) => amount * 0.035
-      case amount => (amount * 0.065)
-    }
-  }
+object Main {
+
+  val CalInterest: (Int) => Double = (x) => if (x <= 20000) x * 0.02
+  else if (x <= 20000) x * 0.04
+  else if (x <= 200000) x * 0.035 else x * 0.065
+
+
+
+
   def main(args: Array[String]): Unit = {
-    println(interest(60000))
+    println(CalInterest(50000))
   }
 }
